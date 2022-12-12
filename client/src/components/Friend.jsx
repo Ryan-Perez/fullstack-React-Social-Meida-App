@@ -6,6 +6,7 @@ import { setFriends } from "state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 
+
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `${REACT_APP_BASE_URL}/${_id}/${friendId}`,
+      `https://social-backend-epco.onrender.com/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
